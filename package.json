@@ -4,11 +4,20 @@
   "description": "ractive-player plugin providing prompts to read from",
   "files": [
     "rp-prompt.js",
-    "rp-prompt.d.ts"
+    "rp-prompt.d.ts",
+    "style.css"
   ],
   "main": "rp-prompt.js",
   "typings": "rp-prompt.d.ts",
   "author": "Yuri Sulyma <yuri@ractive-player.org>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ysulyma/rp-prompt.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ysulyma/rp-prompt/issues"
+  },
+  "homepage": "https://github.com/ysulyma/rp-prompt#readme",
   "license": "MIT",
   "peerDependencies": {
     "@types/react": "^17.0.0",
