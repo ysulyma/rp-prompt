@@ -65,13 +65,12 @@ export default function Prompt (props: React.PropsWithChildren<Props>) {
       (e, hit) => {
         lastX = hit.x;
         lastY = hit.y;
-      },
-      undefined
+      }
     );
   }, []);
 
   return (
-    <div className={NS} {...attrs} {...dragEvents}>
+    <div className={NS} {...attrs} {...dragEvents} ref={ref}>
       {React.Children.map(
         props.children,
         (node: Cue & React.ReactElement, i) => React.cloneElement(node, {active: activeIndex === i})
