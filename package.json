@@ -1,6 +1,6 @@
 {
   "name": "rp-prompt",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "ractive-player plugin providing prompts to read from",
   "files": [
     "rp-prompt.js",
@@ -14,6 +14,9 @@
     "type": "git",
     "url": "git+https://github.com/ysulyma/rp-prompt.git"
   },
+  "scripts": {
+    "css": "stylus -c -w -o style.css style.styl"
+  },
   "bugs": {
     "url": "https://github.com/ysulyma/rp-prompt/issues"
   },
@@ -21,7 +24,7 @@
   "license": "MIT",
   "peerDependencies": {
     "@types/react": "^17.0.0",
-    "ractive-player": "^2.0.3",
+    "ractive-player": "^2.0.5",
     "react": "^17.0.1"
   },
   "devDependencies": {
@@ -29,10 +32,12 @@
     "@typescript-eslint/eslint-plugin": "^4.14.0",
     "@typescript-eslint/parser": "^4.14.0",
     "banner-webpack-plugin": "^0.2.3",
+    "css-loader": "^5.2.6",
     "eslint": "^7.18.0",
     "eslint-plugin-react": "^7.22.0",
     "eslint-plugin-react-hooks": "^4.2.0",
     "ractive-player": "^1.1.1",
+    "style-loader": "^2.0.0",
     "stylus": "^0.54.8",
     "ts-loader": "^8.0.14",
     "typescript": "^4.1.3",

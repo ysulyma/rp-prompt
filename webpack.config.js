@@ -24,23 +24,21 @@ module.exports = {
       commonjs2: "react",
       amd: "react",
       root: "React"
-    },
-    "rp-recording": {
-      commonjs: "rp-recording",
-      commonjs2: "rp-recording",
-      amd: "rp-recording",
-      root: "RPRecording"
-    },
+    }
   },
 
   mode: "production",
 
   module: {
     rules: [
-     {
+      {
         test: /\.tsx?$/,
         loader: "ts-loader"
-      }
+      },
+      {
+        test: /\.css$/,
+        use: ["style-loader", "css-loader"]
+      },
     ]
   },
 
@@ -63,6 +61,6 @@ module.exports = {
   ],
 
   resolve: {
-    extensions: [".ts", ".tsx", ".js", ".jsx", ".json"]
+    extensions: [".ts", ".tsx", ".js", ".jsx", ".json", ".css"]
   }
 }
