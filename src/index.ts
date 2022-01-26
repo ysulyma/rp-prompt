@@ -1,5 +1,3 @@
-import Cue from "./Cue";
-import Prompt from "./Prompt";
+export {Cue} from "./Cue";
+export {Prompt} from "./Prompt";
 import "../style.css";
-
-export {Cue, Prompt};

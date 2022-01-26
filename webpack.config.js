@@ -4,8 +4,8 @@ const TerserPlugin = require("terser-webpack-plugin");
 module.exports = {
   entry: `${__dirname}/src/index.ts`,
   output: {
-    filename: "rp-prompt.js",
-    path: __dirname,
+    filename: "index.js",
+    path: `${__dirname}/dist`,
     library: "RPPrompt",
     libraryTarget: "umd"
   },
@@ -13,11 +13,11 @@ module.exports = {
   devtool: false,
 
   externals: {
-    "ractive-player": {
-      commonjs: "ractive-player",
-      commonjs2: "ractive-player",
-      amd: "ractive-player",
-      root: "RactivePlayer"
+    "liqvid": {
+      commonjs: "liqvid",
+      commonjs2: "liqvid",
+      amd: "liqvid",
+      root: "Liqvid"
     },
     "react": {
       commonjs: "react",
@@ -53,12 +53,6 @@ module.exports = {
     ],
     emitOnErrors: true
   },
-
-  plugins: [
-    new webpack.BannerPlugin({
-      banner: () => require("fs").readFileSync("./LICENSE", {encoding: "utf8"})
-    })
-  ],
 
   resolve: {
     extensions: [".ts", ".tsx", ".js", ".jsx", ".json", ".css"]

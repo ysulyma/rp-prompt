@@ -4,6 +4,8 @@ const NS = "rp-prompt";
 
 interface Props {
   active?: boolean;
+
+  /** Name of marker when this cue should be active */
   on: string;
 }
 
@@ -11,7 +13,8 @@ interface State {
   lines: string[];
 }
 
-export default class Cue extends React.PureComponent<Props, State> {
+/** Lines to be read at a particular marker */
+export class Cue extends React.PureComponent<Props, State> {
   private ref: HTMLDivElement;
 
   constructor(props: Props) {

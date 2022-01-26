@@ -1,20 +1,18 @@
 import * as React from "react";
-import {useContext, useEffect, useMemo, useRef, useState} from "react";
+import {useEffect, useMemo, useRef, useState} from "react";
 
-import {Player, Utils} from "ractive-player";
+import {Utils, usePlayer} from "liqvid";
 const {dragHelperReact} = Utils.interactivity;
 
 const NS = "rp-prompt";
 
-interface Props {
-  prefix?: string;
-}
+import {Cue} from "./Cue";
 
-import Cue from "./Cue";
-
-export default function Prompt (props: React.PropsWithChildren<Props>) {
-  const player = useContext(Player.Context),
-        {script} = player;
+/**
+ * Container for {@link Cue}s
+ */
+export function Prompt (props: React.PropsWithChildren<React.HTMLAttributes<HTMLDivElement>>) {
+  const {script} = usePlayer();
 
   const ref = useRef<HTMLDivElement>();
   const {children, ...attrs} = props;
